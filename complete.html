@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html><!--
+=======================================================
+Do not copy form HTML to your site. Use the Embed Code.
+=======================================================
+--><head>
+
+<title>Online Employment Application Form</title>
+<link rel="stylesheet" media="screen" href="./image/jquery-ui.min.css">
+<link rel="stylesheet" media="all" href="./image/fonts8.css">
+<link rel="stylesheet" media="all" href="./image/screen8.css">
+<link rel="stylesheet" media="print" href="./image/print8.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" media="screen" href="./image/responsive8.css">
+<style media="all">
+/* LOOK AND FEEL */
+body {
+	background: #F4F8FB;
+	background-size: cover;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	background-position: 50% 50%;
+}
+
+.form_table {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0;
+	border: 1px solid #E7EFF4;
+	background: #FFFFFF;
+	background-size: cover;
+	color: #5F696E;
+	overflow: hidden;
+	box-shadow: none;
+	background-position: 50% 50%;
+}
+
+.form_table a {
+	color: #1795FF;
+}
+
+.outside a {
+	color: #1795FF;
+}
+
+.form_table a:visited {
+	color: #1795FF;
+}
+
+.outside a:visited {
+	color: #1795FF;
+}
+
+.segment_header {
+	width: auto;
+	margin: 1px;
+	color: #FFFFFF;
+	background: #2196F3;
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: 50% 50%;
+	border-radius: 0;
+}
+
+.segment_header h1 {
+	border-radius: 0;
+	padding: 20px 10px;
+	font-family: 'Roboto',sans-serif;
+}
+
+.q {
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-left: 15px;
+	float: left;
+	display: block;
+}
+
+.q .question {
+	color: #36454E;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.q .left_question_first {
+	width: 15em;
+}
+
+.q .top_question {
+	margin-bottom: 10px;
+}
+
+.q .text_field {
+	background: #FFFFFF;
+	border: 1px solid #AFC4D2;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #36454E;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	margin: 1px 0;
+	padding: 10px;
+}
+
+.q .file_upload {
+	background: #FFFFFF;
+	border: 1px solid #AFC4D2;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #36454E;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	margin-top: 1px;
+	padding: 10px;
+}
+
+.q .inline_grid td {
+	padding: 5px;
+}
+
+.q .choices input[type="checkbox"]:checked + label::before {
+	color: #2196f3;
+}
+
+.q .choices input[type="radio"]:checked + label::before {
+	color: #2196f3;
+}
+
+.q .drop_down {
+	background: #FFFFFF;
+	border: 1px solid #AFC4D2;
+	border-radius: 2px;
+	border-width: 1px;
+	color: #36454E;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	margin: 1px 0;
+	padding: 9px;
+}
+
+.q .matrix th {
+	color: #36454E;
+	background: #F4F8FB;
+	padding: 5px;
+	font-weight: bold;
+}
+
+.q .matrix td {
+	padding: 5px;
+	border-bottom: 1px solid #FFFFFF;
+	border-top: 1px solid #FFFFFF;
+}
+
+.q .matrix td.question {
+	border-right: 1px solid #FFFFFF;
+	font-weight: normal;
+}
+
+.q .matrix .multi_scale_sub th {
+	font-weight: normal;
+	border-top: 1px solid #FFFFFF !important;
+	background: #F4F8FB;
+}
+
+.q .matrix .multi_scale_break {
+	border-right: 1px solid #FFFFFF;
+}
+
+.q .matrix_row_dark td {
+	color: #36454E;
+	background: #FBFDFD;
+}
+
+.q .matrix_row_dark td.question {
+	color: #36454E;
+	background: #FBFDFD;
+}
+
+.q .matrix_row_light td {
+	color: #36454E;
+	background: #FBFDFD;
+}
+
+.q .matrix_row_light td.question {
+	color: #36454E;
+	background: #FBFDFD;
+}
+
+.q .number_scale td input:checked + label {
+	color: #2196f3;
+}
+
+.q .rating_ranking td {
+	padding: 5px;
+}
+
+.q .slider_range {
+	font-size: 14px;
+}
+
+.q .slider_range::-moz-range-track {
+	background: #FFFFFF;
+	border: 1px solid #AFC4D2;
+	border-radius: 2px;
+	border-width: 1px;
+}
+
+.q .slider_range::-moz-range-thumb {
+	border: none;
+	border-radius: 4px;
+	background: #2196f3;
+}
+
+.q .slider_range::-webkit-slider-runnable-track {
+	background: #FFFFFF;
+	border: 1px solid #AFC4D2;
+	border-radius: 2px;
+	border-width: 1px;
+}
+
+.q .slider_range::-webkit-slider-thumb {
+	border-radius: 4px;
+	background: #2196f3;
+}
+
+.highlight {
+	background: #F4F8FB  !important;
+}
+
+tr.highlight td {
+	background: #F4F8FB  !important;
+}
+
+.q .scroller {
+	border: 1px solid #E7EFF4;
+}
+
+.outside {
+	color: #36454E;
+}
+
+.outside_container {
+	width: 700px;
+	padding: 1em 0;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	color: #36454E;
+}
+
+.outside_container .submit_button {
+	color: #FFFFFF !important;
+	background: #1795FF;
+	background-size: auto;
+	border-style: solid;
+	border-width: 0px;
+	border-color: #FFFFFF;
+	border-radius: 2px;
+	text-align: center;
+	font-family: 'Roboto',sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	min-width: 20%;
+	padding: 10px 20px;
+	box-shadow: none;
+}
+
+.progressBarWrapper {
+	border-radius: 0;
+	background: #FFFFFF;
+	background-size: cover;
+	border-color: #E7EFF4;
+}
+
+.progressBarBack {
+	color: #FFFFFF;
+	background-color: #2196F3;
+}
+
+.progressBarFront {
+	color: #5F696E;
+}
+
+.ui-widget {
+	font-family: 'Roboto',sans-serif;
+}
+
+.invalid {
+	background: #FDF1F0;
+}
+
+.invalid .invalid_message {
+	color: #EC756B;
+	background: #FDF1F0;
+	border: 1px solid #EC756B;
+	border-radius: 2px;
+}
+
+.form_table.invalid {
+	border: 2px solid #EC756B;
+}
+
+.invalid .matrix .invalid_row {
+	background: #FDF1F0;
+}
+
+.outside_container .submit_button:hover, .outside_container .submit_button:focus {
+	background: #106AB7;
+	background-size: auto;
+	border-color: #BBBBBB;
+}
+
+</style>
+<script>
+
+</script>
+</head>
+<body>
+<form method="post" id="FSForm" action="" enctype="multipart/form-data">
+
+
+<!-- BEGIN_ITEMS -->
+<div class="form_table">
+
+<div class="clear"></div>
+
+<div id="q69" class="q full_width">
+<a class="item_anchor" name="ItemAnchor0"></a>
+<div class="segment_header" style="width:auto;text-align:Left;background-repeat:repeat;background-color:transparent;background-image:url(&quot;image/Business09.jpg&quot;);background-size: cover;background-position: 50% 50%;"><h1 style="font-size:24px;font-family:&#39;Cinzel&#39;,serif;padding:90px 1em 10px ;background-color:rgba(0, 0, 0, 0.08)">Join Our Team</h1></div>
+</div>
+
+<div class="clear"></div>
+
+<div id="q2" class="q full_width">
+<a class="item_anchor" name="ItemAnchor1"></a>
+<div class="segment_header" style="width:auto;text-align:Left;"><h1 style="font-size:18px;padding:20px 1em ;">Your Application has been Submitted</h1></div>
+</div>
+
+<div class="clear"></div>
+
+
+<div id="q3" class="q required">
+<a class="item_anchor" name="ItemAnchor2"></a>
+<label class="question top_question" for="f_name">Hi, <br /><br /><br />Thank you for your application submission.<br /><br /><br />Our team would reach out to you within 12 - 48 hours of this appication submission.&nbsp;<br /><br /><br /><br />Good Luck!!!.</label>
+</div>
+<div class="clear"></div><div class="clear"></div><div class="clear"></div>
+
+
+<div class="clear"></div>
+
+
+</div>
+<!-- END_ITEMS -->
+</form>
+
+
+</body></html>
